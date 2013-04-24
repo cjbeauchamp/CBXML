@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSMutableArray *children;
 
 - (void) addChild:(CBXMLNode*)child;
+- (CBXMLNode*) childWithName:(NSString*)childName;
 
 @end

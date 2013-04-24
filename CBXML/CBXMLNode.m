@@ -29,6 +29,21 @@
     [_children addObject:child];
 }
 
+
+- (CBXMLNode*) childWithName:(NSString*)childName
+{
+    CBXMLNode *child = nil;
+    
+    for(CBXMLNode *node in _children) {
+        if([node.nodeName isEqualToString:childName]) {
+            child = node;
+            break;
+        }
+    }
+    
+    return child;
+}
+
 - (id) initWithName:(NSString*)nodeName andAttributes:(NSDictionary*)attributes
 {
     self = [super init];
